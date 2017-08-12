@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Contato</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!--<ion-list>
+    <ion-item>
+      <ion-label>Motivo:</ion-label>
+      <ion-select [(ngModel)]="motivo">
+        <ion-option value="arvoreRemovida">Árvore foi Removida</ion-option>
+        <ion-option value="adicionarArvore">Sugerir Adicionar Árvore</ion-option>
+      </ion-select>
+    </ion-item>
+  <ion-item>
+    <ion-label floating>Mais detalhes:</ion-label>
+    <ion-input type="text" value="" class="text-to-area"></ion-input>
+  </ion-item>
+</ion-list>
+  <button ion-button block>Enviar</button>
+-->
+  <ion-list>
+    <ion-item>
+        <ion-label floating>Recipient (To)</ion-label>
+        <ion-input type="text" [(ngModel)]="recipient"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Subject</ion-label>
+        <ion-input type="text" [(ngModel)]="subject"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Message</ion-label>
+        <ion-textarea [(ngModel)]="message"></ion-textarea>
+    </ion-item>
+</ion-list>
+<div padding>
+    <button block (click)="send(recipient, subject, message)">Send</button>
+</div>
+</ion-content>

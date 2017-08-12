@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Plant Map Palmas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="aling-center">
+    <button ion-button (click)="carregarArvoresMap('Frutiferas')" color="{{getColorFrutiferas}}">Frutiferas</button>
+    <button ion-button (click)="carregarArvoresMap('Medicinais')" color="{{getColorMedicinais}}">Medicinais</button>
+  </div>
+  <div #map id="map"></div>
+  <ion-list>
+    <button ion-item *ngFor="let item of arvoresProximas | sortPipeDistancia" (click)="showAlertDescricaoArvore(item)">
+      {{ item.name }} n.: {{ item.id }}  a {{ item.distancia }} km <button (click)="guiar(item)" ion-button small item-right >Guia-me</button>
+    </button>
+  </ion-list>
+</ion-content>
