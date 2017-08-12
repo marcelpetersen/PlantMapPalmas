@@ -1,12 +1,12 @@
 import { Pipe } from '@angular/core';
-import { Arvore } from './arvore';
+import { Arvore } from '../model/arvore';
 
 @Pipe({
   name: "sortPipeDistancia"
 })
 export class SortPipeDistancia {
 
-  transform(lista: Arvore[], args: string): Arvore[] {
+  transform(lista: Array<Arvore>): Array<Arvore> {
     if(lista != null){
       lista.sort((a: Arvore, b: Arvore) => {
         if (a.distancia < b.distancia) {
@@ -20,5 +20,5 @@ export class SortPipeDistancia {
     }
     return lista;
   }
-  
+
 }

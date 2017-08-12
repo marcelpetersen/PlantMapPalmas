@@ -19,7 +19,7 @@ export class HomePage implements OnInit{
   map: any;
   minhaLat: number;
   minhaLng: number;
-  arvoresProximas: Arvore[];
+  arvoresProximas: Array<Arvore>;
   arvoreDestino: string;
   getColorFrutiferas: string = "danger";
   getColorMedicinais: string = "danger";

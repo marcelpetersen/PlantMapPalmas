@@ -12,7 +12,7 @@ import { HomePage } from '../pages/home/home';
 import { ManuaisPage } from '../pages/manuais/manuais';
 import { ContatoPage } from '../pages/contato/contato';
 import { SobrePage } from '../pages/sobre/sobre';
-import { SortPipeDistancia } from  '../model/pipe';
+import { SortPipeDistancia } from  '../domain/pipe';
 
 @NgModule({
   declarations: [
